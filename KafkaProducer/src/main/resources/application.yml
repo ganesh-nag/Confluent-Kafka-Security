@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  kafka:           
+    producer:  
+      properties:
+         sasl.mechanism: PLAIN
+         security.protocol: SASL_PLAINTEXT   
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer  
+           
+         

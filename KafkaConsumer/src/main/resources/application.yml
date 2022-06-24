@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  kafka:   
+    consumer:                    
+     auto-offset-reset: latest
+     enable-auto-commit: true
+     bootstrap-servers: localhost:9092
+     group-id: bob-group           
+     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+     value-deserializer: org.apache.kafka.common.serialization.StringDeserializer 
+     properties:
+         sasl.mechanism: PLAIN
+         security.protocol: SASL_PLAINTEXT          
